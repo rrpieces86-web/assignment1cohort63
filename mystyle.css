@@ -17,3 +17,11 @@ header{
     justify-content: space-around;
     margin-top: 10%;
 }
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+    border: 1px solid black;
+    background-color: gray;
+}

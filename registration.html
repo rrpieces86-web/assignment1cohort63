@@ -33,10 +33,51 @@
 </nav>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <h1>registration</h1>
-<div>
-  <h1>pet count</h1>
-  <p id="count"></p>
-</div>
-<script src="./assignment1.js"></script>
+
+<form class="container border p-5 bg-light mt-5">
+  <div class="mb-3">
+    <label class="form-label" for="name">name: </label>
+    <input class="form-control" type="text" name="petname">
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="age">age: </label>
+    <input class="form-control" type="number" name="petnumber">
+  </div>
+  <div class="mb-3">
+    <select class="form-select" name="breed" id="breed" name="petbreed">
+      <option value="#">select breed</option>
+      <option value="1">dog</option>
+      <option value="2">cat</option>
+      <option value="3">bird</option>
+      <option value="4">lizard</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <select class="form-select" name="gender" id="gender" name="petgender">
+      <option value="#">select gender</option>
+      <option value="1">male</option>
+      <option value="2">female</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <select class="form-select" name="services" id="services" name="petservices">
+      <option value="#">select a service</option>
+      <option value="1">grooming</option>
+      <option value="2">daycare</option>
+      <option value="3">walking</option>
+    </select>
+  </div>
+  <div class="mb-3 d-flex justify-content-end">
+    <button class="btn btn-primary" type="submit" onclick="registerpet()">register</button>
+    <button class="btn btn-primary" type="reset">clear</button>
+  </div>
+</form>
+<form>
+
+  <div id="petlist">
+
+  </div>
+</form>
+<script src="./register.js"></script>
 </body>
 </html>
