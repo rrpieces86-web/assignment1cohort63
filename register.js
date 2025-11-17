@@ -17,12 +17,13 @@ function Pet(name, age, breed, gender, service){
 }
 
 
-function registerpet(){
+function registerpet(event){
+    event.preventDefault();
     const name = petform.elements["petname"].value;
     const age = petform.elements["petnumber"].value;
     const breed = petform.elements["petbreed"].value;
     const gender = petform.elements["petgender"].value;
-    const service = performance.elements["petservice"].value;
+    const service = petform.elements["petservice"].value;
 
     const newpet = new Pet(name, age, breed, gender, service);
     console.log(newpet)

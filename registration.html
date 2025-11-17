@@ -44,31 +44,32 @@
     <input class="form-control" type="number" name="petnumber">
   </div>
   <div class="mb-3">
-    <select class="form-select" name="breed" id="breed" name="petbreed">
-      <option value="#">select breed</option>
-      <option value="1">dog</option>
-      <option value="2">cat</option>
-      <option value="3">bird</option>
-      <option value="4">lizard</option>
+
+    <select class="form-select" name="petbreed" id="breed">
+      <option value="select">select breed</option>
+      <option value="dog">dog</option>
+      <option value="cat">cat</option>
+      <option value="bird">bird</option>
+      <option value="lizard">lizard</option>
     </select>
   </div>
   <div class="mb-3">
-    <select class="form-select" name="gender" id="gender" name="petgender">
-      <option value="#">select gender</option>
-      <option value="1">male</option>
-      <option value="2">female</option>
+    <select class="form-select" name="petgender" id="gender">
+      <option value="select">select gender</option>
+      <option value="male">male</option>
+      <option value="female">female</option>
     </select>
   </div>
   <div class="mb-3">
-    <select class="form-select" name="services" id="services" name="petservices">
-      <option value="#">select a service</option>
-      <option value="1">grooming</option>
-      <option value="2">daycare</option>
-      <option value="3">walking</option>
+    <select class="form-select" name="petservice" id="services">
+      <option value="select">select a service</option>
+      <option value="grooming">grooming</option>
+      <option value="daycare">daycare</option>
+      <option value="walking">walking</option>
     </select>
   </div>
   <div class="mb-3 d-flex justify-content-end">
-    <button class="btn btn-primary" type="submit" onclick="registerpet()">register</button>
+    <button class="btn btn-primary" type="submit" onclick="registerpet(event)">register</button>
     <button class="btn btn-primary" type="reset">clear</button>
   </div>
 </form>
