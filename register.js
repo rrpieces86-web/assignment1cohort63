@@ -37,22 +37,31 @@ function registerpet(event){
 }
 
 function createpetcard(newpet){
-    const card = document.createElement("div");
+    const card = document.createElement("tr");
     card.className = "m-3";
     card.innerHTML = `
-    <div class="card">
+    <tr class="table">
+        <td> ${newpet.name}</td>
+        <td> ${newpet.age}</td>
+        <td> ${newpet.breed}</td>
+        <td> ${newpet.gender}</td>
+        <td> ${newpet.service}</td>
+        <td><button class="btn btn-danger btn-sm delete-btn"> delete </button></td>
+    </tr>`
 
-        <div class="card-body>
-
-        <h5 class="card-title"> ${newpet.name} </h5>
-        <h6 class="card-subtitle"> ${newpet.age} </h6>
-        <h6 class="card-text"> ${newpet.breed} </h6>
-        <h6 class="card-text"> ${newpet.gender} </h6>
-        <h6 class="card-text"> ${newpet.service} </h6>
-        </div>
-        
+    //edit function
     
-    </div>`
+
+    
+
+    //delete function
+    card.querySelector(".delete-btn").addEventListener("click", function (){
+        const confirmation = confirm("are you want to delete row");
+
+        if(!confirmation) return;
+        card.remove();
+    })
+    
 
     return card;
 }
