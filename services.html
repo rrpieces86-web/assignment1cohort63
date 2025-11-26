@@ -6,10 +6,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>services</title>
 </head>
-<body>
+<body style="background-color: lightblue;">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">pet salon</a>
+    <a class="navbar-brand" href="index.html">Happy Paws</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,13 +25,48 @@
           <a class="nav-link" href="registration.html">registration</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link" href="contact.html">contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
     <h1>services</h1>
+    <section class="container">
+
+      <form id="servicesform" class="container border p-5 bg-light mt-5">
+        <div class="mb-3">
+          
+          <label class="form-label" for="service">services</label>
+          <input id="servicename" class="form-control" type="text" name="service" placeholder="grooming" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="description">description</label>
+          <input id="servicedescription" class="form-control" type="text" name="description" placeholder="includes.." required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="price">price</label>
+          <input id="serviceprice" class="form-control" type="number" name="price" placeholder="10.00" step="any" required>
+        </div>
+        <button type="submit" class="btn btn-primary">save</button>
+      </form>
+    </section>
+    <div class="d-flex justify-content-center">
+      <h1>Pet-timonials</h1>
+    </div>
+    <section style="height: 300px;" class="countainer p-5 d-flex justify-content-space-between">
+      <img src="./images/letter.jpg" alt="">
+      <p class="mx-5 text-end">Happy Paws is simply the best in the bussiness! Very friendly and supportive and was there for every need!</p>
+
+    </section>
+  <footer style="background-color: black; color: white; height: 100px;">
+    <h1>Happy Paws</h1>
+  </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <script src="./sevices.js"></script>
 </body>
 </html>
