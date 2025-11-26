@@ -35,3 +35,8 @@ $("#servicesform").submit(function(event){
     }
     this.reset();
 });
+
+$("#changemodebutton").click(function (){
+    //apply or remove the dark mode class//
+    $("body").toggleClass("dark-mode");
+});
