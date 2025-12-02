@@ -12,7 +12,7 @@ $("#servicesform").submit(function(event){
         alert("all fields required");
         $("#servicename").css("border", "solid 2px red");
     } else {
-        alert("data saved");
+        localStorage.setItem("name", servicename)
         $("#servicename").css("border", "solid 1px lightgray");
     }
     this.reset();
@@ -21,7 +21,7 @@ $("#servicesform").submit(function(event){
         alert("all fields required");
         $("#servicedescription").css("border", "solid 2px red");
     } else {
-        alert("data saved");
+        localStorage.setItem("description", servicedescription)
         $("#servicedescription").css("border", "solid 1px lightgray");
     }
     this.reset()
@@ -30,9 +30,10 @@ $("#servicesform").submit(function(event){
         alert("all fields required");
         $("#serviceprice").css("border", "solid 2px red");
     } else {
-        alert("data saved");
+        localStorage.setItem("price", serviceprice)
         $("#serviceprice").css("border", "solid 1px lightgray");
     }
+    alert("data saved")
     this.reset();
 });
 
@@ -40,3 +41,5 @@ $("#changemodebutton").click(function (){
     //apply or remove the dark mode class//
     $("body").toggleClass("dark-mode");
 });
+
+
