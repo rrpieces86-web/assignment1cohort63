@@ -1,0 +1,432 @@
+/* ===================================
+   Happy Paws Professional Stylesheet
+   =================================== */
+
+/* Root Variables for Consistent Theming */
+:root {
+  --primary-color: #4a90e2;
+  --primary-dark: #357abd;
+  --secondary-color: #f39c12;
+  --accent-color: #27ae60;
+  --text-dark: #2c3e50;
+  --text-light: #7f8c8d;
+  --background-light: #f8f9fa;
+  --background-white: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+/* Navigation Styles */
+.navbar {
+  background: var(--background-white) !important;
+  box-shadow: var(--shadow-md);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color) !important;
+  transition: var(--transition);
+}
+
+.navbar-brand:hover {
+  color: var(--primary-dark) !important;
+  transform: scale(1.05);
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-dark) !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.25rem;
+  border-radius: 5px;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  background-color: var(--background-light);
+  color: var(--primary-color) !important;
+}
+
+.nav-link.active {
+  background-color: var(--primary-color);
+  color: var(--background-white) !important;
+}
+
+/* Form Styles */
+form {
+  background: var(--background-white);
+  border-radius: 10px;
+  box-shadow: var(--shadow-lg);
+  padding: 2.5rem;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.form-control,
+.form-select {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+  outline: none;
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+fieldset {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+legend {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding: 0 0.5rem;
+  width: auto;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--background-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+#changemodebutton {
+  margin: 2rem auto;
+  display: block;
+  padding: 0.75rem 2rem;
+  background-color: var(--text-dark);
+  color: var(--background-white);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#changemodebutton:hover {
+  background-color: var(--text-light);
+  transform: translateY(-2px);
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  overflow: hidden;
+  background: var(--background-white);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card img {
+  border-radius: 12px 12px 0 0;
+  object-fit: cover;
+}
+
+.card h1 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  color: var(--primary-color);
+}
+
+.card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* Image Styles */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+}
+
+.img-fluid {
+  transition: var(--transition);
+}
+
+.img-fluid:hover {
+  transform: scale(1.02);
+}
+
+/* Table Styles */
+.table {
+  background: var(--background-white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin: 2rem 0;
+}
+
+.table thead {
+  background-color: var(--primary-color);
+  color: var(--background-white);
+}
+
+.table thead th {
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+.table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(74, 144, 226, 0.05);
+}
+
+.table tbody tr {
+  transition: var(--transition);
+}
+
+.table tbody tr:hover {
+  background-color: rgba(74, 144, 226, 0.1);
+  transform: scale(1.01);
+}
+
+/* Section Styles */
+section {
+  margin: 3rem 0;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Pet-timonials Section */
+section.countainer {
+  background: var(--background-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+section.countainer p {
+  font-style: italic;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+section.countainer img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: var(--background-white);
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 4rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--background-white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* List Styles */
+.list-unstyled {
+  padding: 1rem;
+}
+
+.list-unstyled li {
+  margin-bottom: 0.5rem;
+}
+
+.list-unstyled ul {
+  margin-top: 0.5rem;
+}
+
+.list-unstyled ul li {
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.list-unstyled ul li:before {
+  content: "✓";
+  color: var(--accent-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  
+  section.countainer {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  form {
+    padding: 1.5rem;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container,
+.card,
+form {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Spacing Utilities */
+.mt-10 {
+  margin-top: 3rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+/* Additional Enhancements */
+.border {
+  border: 2px solid var(--border-color) !important;
+}
+
+.bg-light {
+  background-color: var(--background-white) !important;
+}
+
+.p-5 {
+  padding: 3rem !important;
+}
+
+/* Pet Count and Age Average Display */
+#petcount,
+#ageaverage {
+  background: var(--background-white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
